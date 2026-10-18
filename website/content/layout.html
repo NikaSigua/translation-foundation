@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+{{ROBOTS}}<link rel="canonical" href="https://translation.foundation.ge{{PATH}}">
+<link rel="alternate" hreflang="ka" href="https://translation.foundation.ge{{PATH_KA}}">
+<link rel="alternate" hreflang="en" href="https://translation.foundation.ge{{PATH_EN}}">
+<link rel="alternate" hreflang="x-default" href="https://translation.foundation.ge{{PATH_KA}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{{OG_LOCALE}}">
+<meta property="og:site_name" content="{{T:site_name}}">
+<meta property="og:url" content="https://translation.foundation.ge{{PATH}}">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:image" content="https://translation.foundation.ge/og-{{LANG}}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{T:site_name}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14130f">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<script>try{var d=document.documentElement,s=localStorage,t=s.getItem("theme"),z=s.getItem("textsize");if(t==="light"||t==="dark")d.setAttribute("data-theme",t);if(z==="large"||z==="xlarge")d.setAttribute("data-textsize",z);if(s.getItem("readable")==="on")d.setAttribute("data-readable","on")}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">{{T:skip}}</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{L}}/">
+      <svg class="mark" viewBox="0 0 34 26" aria-hidden="true" focusable="false"><rect width="34" height="26" rx="3" fill="#14130f"/><rect x="6" y="13" width="22" height="3.2" rx="1.6" fill="#f4f1ea"/><rect x="10" y="18.6" width="14" height="3.2" rx="1.6" fill="#f2c230"/></svg>
+      <span class="brand-text"><span class="brand-name">{{T:site_name}}</span><span class="brand-other" lang="{{ALT_LANG}}">{{T:site_name_other}}</span></span>
+    </a>
+    <nav class="nav" aria-label="{{T:nav_main}}">
+      <a href="{{L}}/"{{CUR:/}}>{{T:nav_films}}</a>
+      <a href="{{L}}/help/"{{CUR:/help/}}>{{T:nav_help}}</a>
+      <a href="{{L}}/about/"{{CUR:/about/}}>{{T:nav_about}}</a>
+      <a class="lang" href="{{ALT_PATH}}" hreflang="{{ALT_LANG}}" lang="{{ALT_LANG}}"><span aria-hidden="true">{{T:lang_switch_short}}</span><span class="sr-only">{{T:lang_switch}}</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{CONTENT}}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>{{T:footer_note}}</p>
+    <ul class="foot-links">
+      <li><a href="https://github.com/NikaSigua/translation-foundation">{{T:nav_github}}</a></li>
+      <li><a href="{{L}}/check/"{{CUR:/check/}}>{{T:nav_check}}</a></li>
+      <li><a href="mailto:{{CONTACT}}">{{CONTACT}}</a></li>
+      <li><button class="theme-toggle" type="button" data-dark-label="{{T:theme_dark}}" data-light-label="{{T:theme_light}}"><span class="theme-label">{{T:theme_dark}}</span></button></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="/site.js" defer></script>
+{{SCRIPTS}}
+</body>
+</html>

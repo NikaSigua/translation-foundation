@@ -1,0 +1,109 @@
+# Interface text, one line per language: key.en = ... / key.ka = ...
+# Used by layout.html as {{T:key}} and by the Worker as t(lang, "key", {vars}). Every key needs both
+# languages (the build checks). Values are plain text: the Worker escapes them.
+
+# ---------- Layout ----------
+site_name.en = Translation Foundation
+site_name.ka = თარგმანის ფონდი
+site_name_other.en = თარგმანის ფონდი
+site_name_other.ka = Translation Foundation
+skip.en = Skip to content
+skip.ka = მთავარ შინაარსზე გადასვლა
+nav_main.en = Main
+nav_main.ka = მთავარი ნავიგაცია
+nav_films.en = Films
+nav_films.ka = ფილმები
+nav_help.en = How to help
+nav_help.ka = როგორ დავეხმაროთ
+nav_check.en = Subtitle checker
+nav_check.ka = სუბტიტრების შემმოწმებელი
+nav_about.en = About
+nav_about.ka = პროექტის შესახებ
+nav_github.en = The project on GitHub
+nav_github.ka = პროექტი GitHub-ზე
+lang_switch.en = ქართული
+lang_switch.ka = English
+lang_switch_short.en = ქა
+lang_switch_short.ka = EN
+theme_dark.en = Dark theme
+theme_dark.ka = მუქი თემა
+theme_light.en = Light theme
+theme_light.ka = ნათელი თემა
+footer_note.en = An open community project. Subtitles made here are free to use under CC BY-SA 4.0.
+footer_note.ka = ღია სათემო პროექტი. აქ შექმნილი სუბტიტრების გამოყენება თავისუფლად შეიძლება CC BY-SA 4.0 ლიცენზიით.
+
+# ---------- Home ----------
+home_h1.en = Film subtitles, made together a few minutes at a time
+home_h1.ka = ფილმების სუბტიტრები, ერთად და ნაწილ-ნაწილ
+home_lede.en = Volunteers translate films between Georgian and English. Each film below shows how far its subtitles have got. Pick one, do the next few minutes, and the next person carries on from where you stopped.
+home_lede.ka = მოხალისეები ფილმებს ქართულიდან ინგლისურად და ინგლისურიდან ქართულად თარგმნიან. ქვემოთ, თითოეულ ფილმთან ჩანს, სადამდე მივიდა სუბტიტრები. აირჩიეთ ფილმი, თარგმნეთ შემდეგი რამდენიმე წუთი, შემდეგი ადამიანი კი იქიდან გააგრძელებს, სადაც თქვენ გაჩერდით.
+films_h.en = Films
+films_h.ka = ფილმები
+how_h.en = How it works
+how_h.ka = როგორ მუშაობს
+how_1.en = Pick a film and see where its subtitles stop.
+how_1.ka = აირჩიეთ ფილმი და ნახეთ, სადამდეა მისი სუბტიტრები.
+how_2.en = Translate the next few minutes on GitHub, in your browser or in Aegisub.
+how_2.ka = თარგმნეთ შემდეგი რამდენიმე წუთი GitHub-ზე, ბრაუზერში ან Aegisub-ში.
+how_3.en = Send it. Once it's checked, the film moves on, and the next person starts after you.
+how_3.ka = გამოგზავნეთ. შემოწმების შემდეგ ფილმი წინ წაიწევს, შემდეგი ადამიანი კი თქვენ შემდეგ დაიწყებს.
+how_link.en = Step-by-step guide
+how_link.ka = ნაბიჯ-ნაბიჯ ინსტრუქცია
+load_error.en = The film list couldn't be loaded just now. Try again in a minute.
+load_error.ka = ფილმების სიის ჩატვირთვა ახლა ვერ მოხერხდა. სცადეთ ერთ წუთში.
+
+# ---------- Progress ----------
+track_ka.en = Georgian subtitles
+track_ka.ka = ქართული სუბტიტრები
+track_ka_written.en = Georgian dialogue, written down
+track_ka_written.ka = ქართული დიალოგის ჩანაწერი
+track_en.en = English subtitles
+track_en.ka = ინგლისური სუბტიტრები
+done_of.en = {done} of {total} translated
+done_of.ka = თარგმნილია {done} / {total}
+written_to.en = Written down to {at} of {total}
+written_to.ka = ჩაწერილია {at}-მდე, სულ {total}
+finished.en = Finished
+finished.ka = დასრულებულია
+not_started.en = Not started
+not_started.ka = ჯერ არ დაწყებულა
+waiting.en = Waiting for permission
+waiting.ka = ნებართვას ელოდება
+why_waiting.en = Why it's waiting
+why_waiting.ka = რატომ ელოდება
+continue_at.en = Continue from {at}
+continue_at.ka = გააგრძელეთ {at}-დან
+open_film.en = Open
+open_film.ka = გახსნა
+
+# ---------- A film ----------
+all_films.en = All films
+all_films.ka = ყველა ფილმი
+next_translate.en = Next to translate: subtitle {n}, at {at}
+next_translate.ka = შემდეგი სათარგმნი: სუბტიტრი {n}, {at}-ზე
+next_write.en = Continue writing down from {at}.
+next_write.ka = ჩაწერა გააგრძელეთ {at}-დან.
+btn_edit.en = Edit on GitHub
+btn_edit.ka = რედაქტირება GitHub-ზე
+btn_take.en = Say which part you're taking
+btn_take.ka = მიუთითეთ, რომელ ნაწილს იღებთ
+btn_watch_from.en = Watch from {at}
+btn_watch_from.ka = ნახვა {at}-დან
+btn_where.en = Show the spot on GitHub
+btn_where.ka = ადგილის ნახვა GitHub-ზე
+btn_download.en = Download the latest file (.srt)
+btn_download.ka = ბოლო ვერსიის ჩამოტვირთვა (.srt)
+btn_upload.en = Upload a file from Aegisub
+btn_upload.ka = Aegisub-ის ფაილის ატვირთვა
+btn_video.en = Download the video (for Aegisub)
+btn_video.ka = ვიდეოს ჩამოტვირთვა (Aegisub-ისთვის)
+times_match.en = The subtitle times match the film as it is on {link}.
+times_match.ka = სუბტიტრების დრო შეესაბამება ფილმს, როგორც ის {link}-ზეა.
+first_time.en = First time? Read {link}: it takes two minutes.
+first_time.ka = პირველად? წაიკითხეთ „{link}“ — ორ წუთს დაგჭირდებათ.
+letter_link.en = The letter asking for permission
+letter_link.ka = ნებართვის თხოვნის წერილი
+notfound_h.en = Page not found
+notfound_h.ka = გვერდი ვერ მოიძებნა
+notfound_p.en = This page doesn't exist, or it has moved.
+notfound_p.ka = ეს გვერდი არ არსებობს ან სხვა მისამართზე გადავიდა.

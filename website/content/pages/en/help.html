@@ -1,0 +1,52 @@
+<!--
+title: How to help
+description: Add a few minutes of subtitles to a film: in your browser on GitHub, or with the free subtitle editor Aegisub. Each film shows exactly where to continue.
+-->
+<div class="wrap narrow page">
+  <h1>How to help</h1>
+  <p class="lede">Every subtitle file lives in one shared project on <a href="{{REPO}}">GitHub</a>. You add a few subtitles at a time, and each film's page shows exactly where to continue, so nothing is done twice.</p>
+
+  <p class="need"><strong>You need:</strong> a free <a href="https://github.com/signup">GitHub account</a> and a way to watch the film. No GitHub account? <a href="#email">Email your subtitles</a> instead.</p>
+
+  <h2 id="browser">In your browser</h2>
+  <ol class="steps">
+    <li><strong>Pick a film</strong> on the <a href="/en/">film list</a>. Its page shows the next subtitle to translate and the original line, with a button to watch the film from that moment.</li>
+    <li><strong>Say which part you're taking</strong> with the button on the film's page, for example “I'm doing 5–20”. It opens the film's conversation on GitHub.</li>
+    <li><strong>Click “Edit on GitHub”.</strong> The subtitle file opens in GitHub's editor. The first time, GitHub offers to make your own copy of the project (a “fork”): say yes.</li>
+    <li><strong>Find your subtitle</strong> (⌘F or Ctrl+F, search for its number) and replace the English text with Georgian. Keep the number and the time line exactly as they are:
+<pre class="srt"><span class="t">5
+00:02:05,250 --&gt; 00:02:06,300</span>
+<span class="y" lang="ka">გმადლობ.</span></pre>
+    </li>
+    <li><strong>Stop whenever you like</strong>: five subtitles are a real help. Click <b>Commit changes…</b>, describe what you did (“Sintel: 5–20”), then <b>Propose changes</b> and <b>Create pull request</b>.</li>
+    <li><strong>Done.</strong> A maintainer checks your part and adds it. The film's progress moves on, and the next person starts after your last subtitle.</li>
+  </ol>
+
+  <h2 id="aegisub">With Aegisub</h2>
+  <p><a href="https://aegisub.org/">Aegisub</a> is a free subtitle editor for Windows, macOS and Linux. It plays the film beside the subtitles, so it's the best way to work for longer, and the tool to use for writing down a film's dialogue with exact times. Learning it is worth it if you want to get properly involved.</p>
+  <ol class="steps">
+    <li><a href="https://aegisub.org/downloads/">Install Aegisub</a>.</li>
+    <li>From the film's page, download the latest subtitle file and the video.</li>
+    <li>In Aegisub, open both: <b>File → Open Subtitles</b>, then <b>Video → Open Video</b>.</li>
+    <li>To translate, use <b>Subtitle → Translation Assistant</b>: it shows each original line, and you type the translation. Start at the subtitle the film's page gives. To write down dialogue, add a line for each sentence and set its times on the audio waveform.</li>
+    <li>Save with <b>File → Export Subtitles…</b> as SubRip (.srt), with the same file name, for example <code>ka.srt</code>.</li>
+    <li>On the film's page, choose “Upload a file from Aegisub”, drop in your file, then <b>Propose changes</b> and <b>Create pull request</b>.</li>
+  </ol>
+  <p class="note">An upload can never undo anyone else's work. If someone added subtitles while you were working, the automatic check says so, and you add your part to the latest file instead.</p>
+
+  <h2 id="rules">Good subtitles</h2>
+  <ul>
+    <li>At most 2 lines per subtitle, and 42 characters per line.</li>
+    <li>Translate the meaning, in natural, everyday language. Short beats complete.</li>
+    <li>Georgian quotation marks „like this“. Foreign names as they sound: Thom → თომი.</li>
+    <li>In English subtitles of Georgian films, Georgian names in the national romanization, without apostrophes: ვაჟია → Vazhia.</li>
+    <li>Not sure about a line? Translate it as well as you can and say so in your pull request.</li>
+  </ul>
+  <p>The <a href="/en/check/">subtitle checker</a> finds lines that are too long or too fast, in your browser.</p>
+
+  <h2 id="email">No GitHub account?</h2>
+  <p>Email your subtitles to <a href="mailto:translation@foundation.ge">translation@foundation.ge</a>, saying which film and which numbers. They'll be added for you, with your name if you'd like it.</p>
+
+  <h2 id="permission">Films that need permission</h2>
+  <p>Most films are protected for 70 years after their last author dies, so they can only be subtitled with the rights holder's written permission. If you'd like to see one added, send the studio the <a href="{{REPO}}/blob/{{BRANCH}}/PERMISSION-LETTER.md">permission letter</a>.</p>
+</div>

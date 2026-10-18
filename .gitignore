@@ -1,0 +1,9 @@
+# Local Wrangler state and secrets
+website/.wrangler/
+website/.dev.vars*
+node_modules/
+
+# Python and macOS clutter
+__pycache__/
+*.pyc
+.DS_Store

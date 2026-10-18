@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "tears-of-steel",
+    "title": {
+      "en": "Tears of Steel",
+      "ka": "ფოლადის ცრემლები"
+    },
+    "year": 2012,
+    "imdb": "tt2285752",
+    "by": {
+      "en": "Ian Hubert, Blender Foundation",
+      "ka": "იან ჰუბერტი, Blender Foundation"
+    },
+    "runtime": "12:14",
+    "watch": "https://www.youtube.com/watch?v=R6MlUcmOul8",
+    "video": "https://mango.blender.org/download/",
+    "status": "open",
+    "rights": {
+      "en": "Released by the Blender Foundation under CC BY 3.0, which allows translation.",
+      "ka": "Blender Foundation-მა ფილმი CC BY 3.0 ლიცენზიით გამოაქვეყნა, რაც თარგმნის ნებას იძლევა."
+    },
+    "issue": null,
+    "files": [
+      {
+        "lang": "ka",
+        "path": "films/tears-of-steel/ka.srt",
+        "source": "films/tears-of-steel/en.srt"
+      }
+    ]
+  },
+  {
+    "slug": "sintel",
+    "title": {
+      "en": "Sintel",
+      "ka": "სინტელი"
+    },
+    "year": 2010,
+    "imdb": "tt1727587",
+    "by": {
+      "en": "Colin Levy, Blender Foundation",
+      "ka": "კოლინ ლევი, Blender Foundation"
+    },
+    "runtime": "14:48",
+    "watch": "https://www.youtube.com/watch?v=eRsGyueVLvQ",
+    "video": "https://durian.blender.org/download/",
+    "status": "open",
+    "rights": {
+      "en": "Released by the Blender Foundation under CC BY 3.0, which allows translation.",
+      "ka": "Blender Foundation-მა ფილმი CC BY 3.0 ლიცენზიით გამოაქვეყნა, რაც თარგმნის ნებას იძლევა."
+    },
+    "issue": null,
+    "files": [
+      {
+        "lang": "ka",
+        "path": "films/sintel/ka.srt",
+        "source": "films/sintel/en.srt"
+      }
+    ]
+  },
+  {
+    "slug": "blue-mountains",
+    "title": {
+      "en": "Blue Mountains, or An Unbelievable Story",
+      "ka": "ცისფერი მთები, ანუ დაუჯერებელი ამბავი"
+    },
+    "year": 1983,
+    "imdb": "tt0087349",
+    "by": {
+      "en": "Eldar Shengelaia, Georgian Film",
+      "ka": "ელდარ შენგელაია, „ქართული ფილმი“"
+    },
+    "runtime": "1:35:00",
+    "watch": null,
+    "video": null,
+    "status": "waiting",
+    "rights": {
+      "en": "Protected until 2095: the director died in 2025 and the composer, Giya Kancheli, in 2019. Work starts once the studio that made it, Georgian Film, agrees in writing.",
+      "ka": "დაცულია 2095 წლამდე: რეჟისორი 2025 წელს გარდაიცვალა, კომპოზიტორი გია ყანჩელი კი — 2019 წელს. მუშაობა დაიწყება, როცა ფილმის გადამღები სტუდია, „ქართული ფილმი“, წერილობით დათანხმდება."
+    },
+    "issue": null,
+    "files": [
+      {
+        "lang": "ka",
+        "path": "films/blue-mountains/ka.srt"
+      },
+      {
+        "lang": "en",
+        "path": "films/blue-mountains/en.srt",
+        "source": "films/blue-mountains/ka.srt"
+      }
+    ]
+  }
+]

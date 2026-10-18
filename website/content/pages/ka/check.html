@@ -1,0 +1,84 @@
+<!--
+title: სუბტიტრების ფაილის შემოწმება
+description: შეამოწმეთ .srt ან .vtt ფაილის დრო, სტრიქონების სიგრძე და კითხვის სიჩქარე და AcadNusx-ის მსგავსი ძველი შრიფტებით აკრეფილი ქართული ტექსტი Unicode-ში გადაიყვანეთ. მუშაობს თქვენს ბრაუზერში; ფაილი არსად იტვირთება.
+-->
+<div class="wrap narrow page">
+  <h1>სუბტიტრების ფაილის შემოწმება</h1>
+  <p class="lede">გახსენით .srt ან .vtt ფაილი და იპოვეთ ზედმეტად გრძელი სტრიქონები, ზედმეტად სწრაფად მონაცვლე სუბტიტრები და დროის შეცდომები. შემმოწმებელი ასევე ასწორებს AcadNusx-ის მსგავსი ძველი შრიფტებით აკრეფილ ქართულს. ფაილი თქვენს მოწყობილობაზე რჩება.</p>
+    <form class="tool checker" data-checker>
+      <div class="field">
+        <label for="sub-file">სუბტიტრების ფაილი (.srt ან .vtt)</label>
+        <input id="sub-file" type="file" accept=".srt,.vtt,text/plain,text/vtt">
+      </div>
+      <details class="paste">
+        <summary>ან ჩასვით ტექსტი</summary>
+        <label class="sr-only" for="sub-text">სუბტიტრების ტექსტი</label>
+        <textarea id="sub-text" rows="8" spellcheck="false" autocomplete="off"></textarea>
+      </details>
+      <div class="field">
+        <label for="sub-lang">სუბტიტრების ენა</label>
+        <select id="sub-lang">
+          <option value="ka">ქართული (მაქსიმუმ 17 სიმბოლო წამში)</option>
+          <option value="en">ინგლისური (მაქსიმუმ 20 სიმბოლო წამში)</option>
+          <option value="other">სხვა ენა (მაქსიმუმ 17 სიმბოლო წამში)</option>
+        </select>
+      </div>
+      <button class="button button-primary" type="submit">შემოწმება</button>
+      <p class="form-status" role="status"></p>
+    </form>
+    <noscript><p class="hint">შემმოწმებელს JavaScript სჭირდება. ის მხოლოდ თქვენს ბრაუზერში მუშაობს.</p></noscript>
+
+    <section class="report" data-report hidden aria-labelledby="report-title">
+      <h2 id="report-title" tabindex="-1">შედეგი</h2>
+      <p class="report-summary" data-summary></p>
+      <div class="report-legacy" data-legacy hidden>
+        <p>ტექსტი, როგორც ჩანს, AcadNusx-ის მსგავსი ძველი ქართული შრიფტით არის აკრეფილი, ამიტომ ლათინური ასოებით ჩანს.</p>
+        <p><button type="button" class="button button-primary" data-convert>ქართულ Unicode-ში გადაყვანა</button></p>
+      </div>
+      <div class="report-preview" data-preview hidden></div>
+      <p class="report-actions"><button type="button" class="button" data-download="srt">SRT-ად ჩამოტვირთვა</button> <button type="button" class="button" data-download="vtt">WebVTT-ად ჩამოტვირთვა</button></p>
+      <div class="table-scroll"><table class="data report-table" data-issues hidden>
+        <caption class="sr-only">ნაპოვნი პრობლემები, სუბტიტრების მიხედვით</caption>
+        <thead><tr><th scope="col">№</th><th scope="col">დრო</th><th scope="col">პრობლემა</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+
+    <h2 id="what">რას ამოწმებს</h2>
+    <ul>
+      <li>ერთ სუბტიტრში მაქსიმუმ 2 სტრიქონს, სტრიქონში კი მაქსიმუმ 42 სიმბოლოს.</li>
+      <li>ეკრანზე ჩვენების დროს: ⅚ წამიდან 7 წამამდე.</li>
+      <li>კითხვის სიჩქარეს: ქართულად 17 სიმბოლო წამში, ინგლისურად — 20.</li>
+      <li>ერთმანეთზე გადაფარულ, არეულ რიგში მდგომ და ცარიელ სუბტიტრებს.</li>
+      <li>ქართულში: ძველი შრიფტების ტექსტს, მთავრულ ასოებს და პირდაპირ ბრჭყალებს (").</li>
+    </ul>
+    <p>წესები ახსნილია <a href="/help/#rules">სახელმძღვანელოში</a>. ჩამოტვირთული ფაილები თავიდან ინომრება და UTF-8 კოდირებით ინახება.</p>
+
+    <h2 id="old-fonts">ძველი ქართული შრიფტები</h2>
+    <p>AcadNusx-ის მსგავსი შრიფტები ლათინური ასოების ადგილას ქართულ ასოებს გამოსახავს, ამიტომ კომპიუტერზე, სადაც ეს შრიფტი არ არის, ტექსტი ლათინური ასოებით ჩანს. გადამყვანი თითოეულ ასოს ქართული კლავიატურის განლაგების მიხედვით აბრუნებს: T ხდება თ, W კი — ჭ. გადაყვანის შემდეგ რამდენიმე სტრიქონი შეამოწმეთ.</p>
+</div>
+
+<script type="application/json" id="checker-text">{
+  "noInput": "ჯერ აირჩიეთ ფაილი ან ჩასვით ტექსტი.",
+  "noCues": "სუბტიტრები ვერ მოიძებნა. ეს .srt ან .vtt ფაილია?",
+  "summary": "სუბტიტრები: {cues}. ხანგრძლივობა: {duration}. {issues}",
+  "issuesNone": "პრობლემა არ მოიძებნა.",
+  "issuesSome": "ნაპოვნი პრობლემები: {n}.",
+  "notUtf8": "ფაილი UTF-8 კოდირებით არ არის, ამიტომ წაკითხულია როგორც Windows-1252. შეამოწმეთ ტექსტი და ფაილი UTF-8 კოდირებით შეინახეთ.",
+  "converted": "ქართულ Unicode-ში გადაყვანილი სუბტიტრები: {n}. ქვემოთ რამდენიმე მათგანი შეამოწმეთ და შემდეგ ფაილი ჩამოტვირთეთ.",
+  "previewTitle": "პირველი სუბტიტრები გადაყვანის შემდეგ",
+  "parse": "ამ სუბტიტრის წაკითხვა ვერ ხერხდება: დროის სწორი სტრიქონი არ აქვს",
+  "order": "იწყება წინა სუბტიტრზე ადრე",
+  "overlap": "შემდეგ სუბტიტრს {ms} მილიწამით ფარავს",
+  "short": "ეკრანზე {s} წმ რჩება; საჭიროა მინიმუმ 0,83 წმ",
+  "long": "ეკრანზე {s} წმ რჩება; მაქსიმუმ 7 წმ",
+  "cps": "კითხვის სიჩქარე: {cps} სიმბოლო წამში; მაქსიმუმ {max}",
+  "lineLong": "სტრიქონი {i}: {n} სიმბოლო; მაქსიმუმ 42",
+  "lines": "{n} სტრიქონი; მაქსიმუმ 2",
+  "empty": "ცარიელი სუბტიტრი",
+  "mtavruli": "მთავრული ასოები: გამოიყენეთ ჩვეულებრივი ასოები, ხაზგასასმელად კი — დახრილი შრიფტი",
+  "quotes": "პირდაპირი ბრჭყალები: ქართულში გამოიყენეთ „ და “",
+  "more": "ნაჩვენებია მხოლოდ პირველი {n} პრობლემა.",
+  "fileSuffix": "-checked",
+  "decimal": ","
+}</script>

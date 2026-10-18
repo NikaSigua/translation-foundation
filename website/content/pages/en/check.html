@@ -1,0 +1,83 @@
+<!--
+title: Check a subtitle file
+description: Check an .srt or .vtt file for timing, line length and reading speed, and convert Georgian text typed in old fonts such as AcadNusx to Unicode. Runs in your browser; nothing is uploaded.
+-->
+<div class="wrap narrow page">
+  <h1>Check a subtitle file</h1>
+  <p class="lede">Open an .srt or .vtt file to find lines that are too long, subtitles that change too fast and timing mistakes. It also repairs Georgian typed in old fonts such as AcadNusx. The file stays on your device.</p>
+    <form class="tool checker" data-checker>
+      <div class="field">
+        <label for="sub-file">Subtitle file (.srt or .vtt)</label>
+        <input id="sub-file" type="file" accept=".srt,.vtt,text/plain,text/vtt">
+      </div>
+      <details class="paste">
+        <summary>Or paste the text</summary>
+        <label class="sr-only" for="sub-text">Subtitle text</label>
+        <textarea id="sub-text" rows="8" spellcheck="false" autocomplete="off"></textarea>
+      </details>
+      <div class="field">
+        <label for="sub-lang">Language of the subtitles</label>
+        <select id="sub-lang">
+          <option value="ka">Georgian (up to 17 characters a second)</option>
+          <option value="en">English (up to 20 characters a second)</option>
+          <option value="other">Another language (up to 17 characters a second)</option>
+        </select>
+      </div>
+      <button class="button button-primary" type="submit">Check</button>
+      <p class="form-status" role="status"></p>
+    </form>
+    <noscript><p class="hint">The checker needs JavaScript. It runs only in your browser.</p></noscript>
+
+    <section class="report" data-report hidden aria-labelledby="report-title">
+      <h2 id="report-title" tabindex="-1">Result</h2>
+      <p class="report-summary" data-summary></p>
+      <div class="report-legacy" data-legacy hidden>
+        <p>The text looks as if it was typed in an old Georgian font such as AcadNusx, so it shows as Latin letters.</p>
+        <p><button type="button" class="button button-primary" data-convert>Convert to Georgian Unicode</button></p>
+      </div>
+      <div class="report-preview" data-preview hidden></div>
+      <p class="report-actions"><button type="button" class="button" data-download="srt">Download as SRT</button> <button type="button" class="button" data-download="vtt">Download as WebVTT</button></p>
+      <div class="table-scroll"><table class="data report-table" data-issues hidden>
+        <caption class="sr-only">Problems found, by subtitle</caption>
+        <thead><tr><th scope="col">No.</th><th scope="col">Time</th><th scope="col">Problem</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+
+    <h2 id="what">What it checks</h2>
+    <ul>
+      <li>2 lines per subtitle and 42 characters per line, at most.</li>
+      <li>⅚ of a second to 7 seconds on screen.</li>
+      <li>Reading speed: 17 characters a second in Georgian, 20 in English.</li>
+      <li>Overlapping, out-of-order and empty subtitles.</li>
+      <li>In Georgian: old-font text, Mtavruli capitals and straight quotation marks.</li>
+    </ul>
+    <p>The rules are explained in the <a href="/en/help/#rules">guide</a>. Downloaded files are renumbered and saved as UTF-8.</p>
+
+    <h2 id="old-fonts">Old Georgian fonts</h2>
+    <p>Fonts such as AcadNusx draw Georgian letters in place of Latin ones, so on a computer without the font the text shows as Latin letters. The converter turns each letter back using the Georgian keyboard layout: T becomes თ, and W becomes ჭ. Check a few lines after converting.</p>
+</div>
+
+<script type="application/json" id="checker-text">{
+  "noInput": "Choose a file or paste the text first.",
+  "noCues": "No subtitles found. Is this an .srt or .vtt file?",
+  "summary": "Subtitles: {cues}. Length: {duration}. {issues}",
+  "issuesNone": "No problems found.",
+  "issuesSome": "Problems found: {n}.",
+  "notUtf8": "The file is not in UTF-8, so it was read as Windows-1252. Check the text, and save the file as UTF-8.",
+  "converted": "Subtitles converted to Georgian Unicode: {n}. Check a few of them below, then download the file.",
+  "previewTitle": "First subtitles after converting",
+  "parse": "Cannot read this subtitle: there is no valid time line",
+  "order": "Starts before the previous subtitle",
+  "overlap": "Overlaps the next subtitle by {ms} ms",
+  "short": "On screen for {s} s; it needs at least 0.83 s",
+  "long": "On screen for {s} s; at most 7 s",
+  "cps": "Reading speed {cps} characters a second; at most {max}",
+  "lineLong": "Line {i} has {n} characters; at most 42",
+  "lines": "{n} lines; at most 2",
+  "empty": "Empty subtitle",
+  "mtavruli": "Mtavruli capitals: use ordinary letters, and italics for emphasis",
+  "quotes": "Straight quotation marks: use „ and “ in Georgian",
+  "more": "Only the first {n} problems are listed.",
+  "fileSuffix": "-checked"
+}</script>
