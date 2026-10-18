@@ -1,0 +1,26 @@
+# Checks every subtitle file when someone proposes a change, and on main after merging.
+# It only reads the files: no secrets, and no write access to the repository.
+name: Check subtitles
+
+on:
+  pull_request:
+    paths: ["films/**", "tools/**"]
+  push:
+    branches: [main]
+    paths: ["films/**", "tools/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0              # the shared copy is needed to make sure nothing gets undone
+          persist-credentials: false
+      - name: Check the subtitle files
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && github.base_ref || '' }}
+        run: python3 tools/check_subtitles.py ${BASE:+--base "origin/$BASE"}
